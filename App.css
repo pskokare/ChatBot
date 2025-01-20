@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ffffff, #ffcc80);
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.App h1 {
+  border: 2px solid #4CAF50;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  width:500px;
+  color: #000000;
+  background: linear-gradient(to right, #e3f0e3, #acffbc);
+
+}
+
+.chatbox {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  overflow-y: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.message-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.message.user {
+  background-color: rgb(201, 232, 201);
+  text-align: right;
+}
+
+.message.bot {
+  background-color: rgb(234, 222, 222);
+  text-align: left;
+}
+
+.message-input {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.message-input input {
+  width: 80%;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  background-color: #f7f7f7;
+  color: #333;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.message-input input:focus {
+  outline: none;
+  border: 1px solid #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.8);
+}
+
+.message-input button {
+  width: 20%;
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.8);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message-input button:hover {
+  background-color: #45a049;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+}
+
+@media (max-width: 768px) {
+  .chatbox {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .message-input input {
+    width: 70%;
+  }
+
+  .message-input button {
+    width: 25%;
+  }
+}
